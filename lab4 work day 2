@@ -1,0 +1,33 @@
+def isprime(n): # this function checks to see if the input is a prime number, if it is, then the function will return it, and vice versa
+    for i in range(2, n):
+        if n % i == 0:
+            break
+    else:
+        return n 
+
+def find_largest_prime_factor(n):
+    factor = [] # I intend to store all the prime factors in a list and later compare each element
+    num = n # basically this is the number I am inputting
+    i = 1 # so here I set i to 1
+    if num >= 2: # this if statement is to see if the num inputted is bigger than 2, otherwise it won't work with the rest of the program
+    
+        while i <= num: # while loop here because the value of i will be updated s
+            i += 1 # so here I am updating i
+            if num % i == 0: # if i is a factor
+                isprime(i) # I run i through my helper function to see if it is a prime factor
+                factor.append(i) # only the returned number will be added to the list that contains the prime factors
+                num = num / i # here I update the number so I will proceed to the next step of the finding process
+                i = 1 # since a new cycle is starting, I`m setting i back to 1
+    else:
+        print("error") # so this else statement shows that the number isn`t eligible for the program
+
+    largest = factor[0] # so I have the first number of the list as the largest number
+    for num in factor: # this for loop goes through the function
+        if num > largest: # this if statement checks to see if the current number of the list is bigger than the first number of the list
+            largest = num #if it is, then the largest number gets updated
+    print(largest) # at last, the biggest prime factor gets returned
+
+
+
+if __name__ == "__main__":
+    #find_largest_prime_factor(600851475143)
