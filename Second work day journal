@@ -1,4 +1,4 @@
-Second entry (3/1/2021 4:10pm – 5:20pm (75 minutes)):
+Second entry (3/1/2021 4:10pm – 5:20pm (70 minutes)):
 Today I finally figured out the largest prime number problem that I was stuck on since last time. So, I started the day by practicing some find prime factor problems. After I know how to find the prime numbers, I set about drawing a diagram of the process.
  
 Basically, my solution is to first see if the number is divisible by 2, which is the smallest prime number. Ill stop when the number finishes the first cycle, which should produce a prime factor of the number. Then the second cycle will be done on the other factor of the original number. The program will do this time after time until there`s nothing left to analyze. I also wrote a helper function that tests to see if a number is prime or not. I call this function after the main body program has found a factor of the original number. Then I pass this new number as the argument of my helper function and determine whether it is prime or not. 
